@@ -1,4 +1,4 @@
-const CACHE_NAME = "footballpwa"
+const CACHE_NAME = "footballpwa";
 var urlsToCache = [
     "/",
     "/index.html",
@@ -69,7 +69,7 @@ self.addEventListener("install", function(event) {
       body = 'Push massage no payload';
     }
     var options = {
-      body:body,
+      body: body,
       icon : '/images/notif.png',
       vibrate: [100,50,100],
       data: {
@@ -78,6 +78,6 @@ self.addEventListener("install", function(event) {
       }
     };
     event.waitUntil(
-      self.ServiceWorkerRegistration.showNotification ('Push Notification', options)
+      self.registration.showNotification ('Push Notification', options)
     );
   });
