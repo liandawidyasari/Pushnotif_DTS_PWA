@@ -78,6 +78,6 @@ self.addEventListener("install", function(event) {
       }
     };
     event.waitUntil(
-      self.ServiceWorkerRegistration.showNotification ('Push Notification', options)
+      self.registration.showNotification ('Push Notification', options)
     );
   });
